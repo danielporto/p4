@@ -68,7 +68,7 @@ if (typeof require == 'function') {
         // install P4 using quartus_pgm on the selected device and scan memory instances
         installP4: async () => {
             if (board.quartus.stp.editingMemory) await board.quartus.stp.endMemoryEdit();
-            return board.quartus.pgm.exec(`-m jtag -c 1 -o "p;P4.sof`).then(board.scanMemories);
+            return board.quartus.pgm.exec(`-m jtag -c 1 -o "p;P4.sof"`).then(board.scanMemories);
         },
         // write memories to selected device on the selected device
         generateMIFs: async memoryUpdates => {
